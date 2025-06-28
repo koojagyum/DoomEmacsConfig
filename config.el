@@ -136,3 +136,24 @@
 ;; org fold level
 (after! org
   (setq org-startup-folded 'fold))
+
+;; org-bullets setting
+(use-package org-bullets
+    :config
+    (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
+
+;; org-tree-slide keybinding
+(with-eval-after-load "org-tree-slide"
+  (define-key org-tree-slide-mode-map (kbd "C-<") 'org-tree-slide-move-previous-tree)
+  (define-key org-tree-slide-mode-map (kbd "C->") 'org-tree-slide-move-next-tree))
+
+(use-package org-tree-slide
+  :custom
+  (org-image-actual-width nil)
+  (org-tree-slide-breadcrumbs " // ")
+  (org-tree-slide-activate-message "Presentation started!")
+  (org-tree-slide-deactivate-message "Presentation finished!")
+  )
+
+;; theme
+(setq doom-theme 'doom-monokai-pro)

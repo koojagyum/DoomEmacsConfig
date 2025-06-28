@@ -50,3 +50,9 @@
 ;; (unpin! t)
 
 (package! swift-mode)
+(package! lua-mode)
+(package! lsp-sourcekit)
+(package! org-tree-slide)
+(package! org-bullets)
+(package! spacemacs-theme)
+(package! writeroom-mode)

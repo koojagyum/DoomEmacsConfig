@@ -51,6 +51,13 @@ useer."
     (find-file file))
   )
 
+;; Locate sourcekit-lsp
+;; (defun find-sourcekit-lsp ()
+;;   (or (executable-find "sourcekit-lsp")
+;;       (and (eq system-type 'darwin)
+;;            (string-trim (shell-command-to-string "xcrun -f sourcekit-lsp")))
+;;       "/usr/bin/sourcekit-lsp"))
+
 (provide 'koodev-utils)
 
 ;;; koodev-utils.el ends herex
