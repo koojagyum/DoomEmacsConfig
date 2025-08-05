@@ -55,4 +55,4 @@
 (package! org-tree-slide)
 (package! org-bullets)
 (package! spacemacs-theme)
-(package! writeroom-mode)
+(package! centaur-tabs)

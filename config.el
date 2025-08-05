@@ -157,3 +157,20 @@
 
 ;; theme
 (setq doom-theme 'doom-monokai-pro)
+
+;; centaur-tabs setting
+(use-package centaur-tabs
+  :demand
+  :config
+  (centaur-tabs-mode t)
+  :bind
+  ("C-<prior>" . centaur-tabs-backward)
+  ("C-<next>" . centaur-tabs-forward))
+
+;; org todo
+;; original bellow
+;; ((sequence "TODO(t)" "PROJ(p)" "LOOP(r)" "STRT(s)" "WAIT(w)" "HOLD(h)" "IDEA(i)" "|" "DONE(d)" "KILL(k)")
+;;  (sequence "[ ](T)" "[-](S)" "[?](W)" "|" "[X](D)")
+;;  (sequence "|" "OKAY(o)" "YES(y)" "NO(n)"))
+(setq org-todo-keywords
+      '((sequence "TODO(t)" "WAIT(w)" "HOLD(h)" "|" "DONE(d)" "DELEGATED(e)" "CANCEL(c)" "FAIL(f)")))
