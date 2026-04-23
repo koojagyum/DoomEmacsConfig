@@ -82,3 +82,8 @@
   :load-path "~/.config/doom/koodev/")
 (use-package koodev-org
   :load-path "~/.config/doom/koodev/")
+
+(use-package! claude-code
+  :defer t
+  :custom
+  (claude-code-terminal-backend 'vterm))
