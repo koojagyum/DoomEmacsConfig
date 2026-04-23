@@ -12,8 +12,8 @@ Install Emacs
 
 ```shell
 $ brew tap railwaycat/emacsmacport
-$ brew install emacs-mac --with-modules
-$ ln -s /opt/homebrew/opt/emacs-mac/Emacs.app /Applications/Emacs.app
+$ brew install emacs-mac@30exp --with-modules
+$ ln -s /opt/homebrew/opt/emacs-mac@30exp/Emacs.app /Applications/Emacs.app
 ```
 
 Setup Doom Emacs
@@ -28,7 +28,7 @@ $ ~/.config/emacs/bin/doom install
 Setup .zshrc
 
 ``` shell
-alias emacs='/opt/homebrew/opt/emacs-mac/bin/emacs -nw'
+alias emacs='/opt/homebrew/opt/emacs-mac@30exp/bin/emacs -nw'
 
 export PATH="$HOME/.config/emacs/bin:$PATH"
 ```
