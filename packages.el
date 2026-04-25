@@ -53,14 +53,8 @@
 ;; ...Or *all* packages (NOT RECOMMENDED; will likely break things)
 ;; (unpin! t)
 
-(package! swift-mode)
-(package! lsp-sourcekit)
 (package! org-bullets)
-(package! spacemacs-theme)
-(package! writeroom-mode)
 (package! ox-pandoc)
-(package! ghostel)
-(package! vterm)
 
 (package! claude-code
   :recipe (:host github
