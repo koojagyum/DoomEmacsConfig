@@ -1,37 +1,32 @@
 ;;; koodev/+bindings.el -*- lexical-binding: t; -*-
 
-(global-set-key (kbd "C-x |") 'toggle-window-split)
-(global-set-key (kbd "C-x p") '(lambda ()
-                                 "Backwarding other-window"
-                                 (interactive)
-                                 (other-window -1)))
-(global-set-key (kbd "C-x F") 'find-file-as-root)
+(defun koodev/other-window-backward ()
+  "Switch to the previous window (mirror of `other-window' going forward)."
+  (interactive)
+  (other-window -1))
 
-;; Ctrl-etc stroke
-(global-set-key (kbd "C-+") 'text-scale-increase)
-(global-set-key (kbd "C--") 'text-scale-decrease)
+(defun koodev/scroll-line-down ()
+  "Move point up one line while scrolling the viewport down."
+  (interactive)
+  (previous-line)
+  (scroll-down 1))
 
-;; Meta stroke
-;; Scroll without moving cursor position
-(global-set-key (kbd "M-p")
-      '(lambda ()
-         "Scroll down without updating cursor position."
-         (interactive)
-         (progn
-           (previous-line)
-           (scroll-down 1))))
-(global-set-key (kbd "M-n")
-      '(lambda ()
-         "Scroll up without updating cursor position."
-         (interactive)
-         (progn
-           (next-line)
-           (scroll-up 1))))
-(global-set-key (kbd "M-P") '(lambda ()
-                               (interactive)
-                               (scroll-down 1)))
-(global-set-key (kbd "M-N") '(lambda ()
-                               (interactive)
-                               (scroll-up 1)))
+(defun koodev/scroll-line-up ()
+  "Move point down one line while scrolling the viewport up."
+  (interactive)
+  (next-line)
+  (scroll-up 1))
+
+(map! "C-x |" #'toggle-window-split
+      "C-x p" #'koodev/other-window-backward
+      "C-x F" #'find-file-as-root
+      "C-+"   #'text-scale-increase
+      "C--"   #'text-scale-decrease
+      ;; Scroll one line, keeping point's row stable on screen.
+      "M-p"   #'koodev/scroll-line-down
+      "M-n"   #'koodev/scroll-line-up
+      ;; Scroll without moving point at all.
+      "M-P"   (cmd! (scroll-down 1))
+      "M-N"   (cmd! (scroll-up 1)))
 
 ;;; +bindings.el ends here
