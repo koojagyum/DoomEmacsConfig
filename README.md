@@ -13,6 +13,7 @@ Install Emacs
 ```shell
 $ brew tap railwaycat/emacsmacport
 $ brew install emacs-mac@30exp --with-modules
+$ brew install ripgrep
 $ ln -s /opt/homebrew/opt/emacs-mac@30exp/Emacs.app /Applications/Emacs.app
 ```
 
@@ -27,7 +28,7 @@ $ ~/.config/emacs/bin/doom install
 
 Setup .zshrc
 
-``` shell
+```shell
 alias emacs='/opt/homebrew/opt/emacs-mac@30exp/bin/emacs -nw'
 
 export PATH="$HOME/.config/emacs/bin:$PATH"
