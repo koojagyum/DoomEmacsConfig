@@ -3,7 +3,7 @@ Doom Emacs Config
 
 ## Requirement
 
-* Emacs: `emacs-mac@29`
+* Emacs: `emacs-mac@30exp`
 * doomemacs: 260419 or later
 
 ## Install

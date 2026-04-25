@@ -12,13 +12,14 @@
 (setq face-font-rescale-alist '(("AppleGothic" . 1.2)))
 
 ;; Enable copying to clipboard (make a region is to copy...)
-(setq x-select-enable-clibboard t)
+(setq x-select-enable-clipboard t)
 
 ;; Disable short answer
 (setq use-short-answers nil)
 
 ;; theme
-(setq doom-theme 'doom-solarized-light)
+;; (setq doom-theme 'doom-solarized-light)
+(setq doom-theme 'doom-solarized-dark)
 
 (provide 'koodev-editor)
 
