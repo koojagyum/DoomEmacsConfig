@@ -1,8 +1,4 @@
-;;; koodev/koodev-keybinding.el -*- lexical-binding: t; -*-
-
-(defvar doomdot-dir (file-name-directory load-file-name)
-  "The root dir(.doom.d) of the Doom Emacs configuration.")
-(add-to-list 'load-path doomdot-dir)
+;;; koodev/+bindings.el -*- lexical-binding: t; -*-
 
 (global-set-key (kbd "C-x |") 'toggle-window-split)
 (global-set-key (kbd "C-x p") '(lambda ()
@@ -38,6 +34,4 @@
                                (interactive)
                                (scroll-up 1)))
 
-(provide 'koodev-keybinding)
-
-;;; koodev/koodev-keybinding.el ends here
+;;; +bindings.el ends here

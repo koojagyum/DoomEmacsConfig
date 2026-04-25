@@ -1,4 +1,4 @@
-;;; koodev-util.el -*- lexical-binding: t; -*-
+;;; koodev/+util.el -*- lexical-binding: t; -*-
 
 ;; Copy path to clipboard
 ;; http://stackoverflow.com/questions/2416655/file-path-to-clipboard-in-emacs
@@ -48,20 +48,6 @@ useer."
   (let ((file (read-file-name "Edit as root: ")))
     (unless (file-writable-p file)
       (setq file (concat "/sudo:root@localhost:" file)))
-    (find-file file))
-  )
+    (find-file file)))
 
-;; org -> md translation
-(with-eval-after-load 'ox
-  (require 'ox-pandoc))
-
-;; Locate sourcekit-lsp
-;; (defun find-sourcekit-lsp ()
-;;   (or (executable-find "sourcekit-lsp")
-;;       (and (eq system-type 'darwin)
-;;            (string-trim (shell-command-to-string "xcrun -f sourcekit-lsp")))
-;;       "/usr/bin/sourcekit-lsp"))
-
-(provide 'koodev-util)
-
-;;; koodev-util.el ends herex
+;;; +util.el ends here
