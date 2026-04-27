@@ -3,7 +3,7 @@ Doom Emacs Config
 
 ## Requirement
 
-* Emacs: `emacs-mac@30exp`
+* Emacs: `emacs-mac`
 * doomemacs: 260419 or later
 
 ## Install
@@ -12,9 +12,9 @@ Install Emacs
 
 ```shell
 $ brew tap railwaycat/emacsmacport
-$ brew install emacs-mac@30exp --with-modules
+$ brew install emacs-mac --with-modules
 $ brew install ripgrep
-$ ln -s /opt/homebrew/opt/emacs-mac@30exp/Emacs.app /Applications/Emacs.app
+$ ln -s /opt/homebrew/opt/emacs-mac/Emacs.app /Applications/Emacs.app
 ```
 
 Setup Doom Emacs
@@ -29,7 +29,7 @@ $ ~/.config/emacs/bin/doom install
 Setup .zshrc
 
 ```shell
-alias emacs='/opt/homebrew/opt/emacs-mac@30exp/bin/emacs -nw'
+alias emacs='/opt/homebrew/opt/emacs-mac/bin/emacs -nw'
 
 export PATH="$HOME/.config/emacs/bin:$PATH"
 ```

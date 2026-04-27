@@ -56,7 +56,5 @@
 (package! org-bullets)
 (package! ox-pandoc)
 
-(package! claude-code
-  :recipe (:host github
-           :repo "stevemolitor/claude-code.el"
-           :files ("*.el")))
+(package! claude-code-ide
+  :recipe (:host github :repo "manzaltu/claude-code-ide.el"))

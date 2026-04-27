@@ -1,11 +1,11 @@
 ;;; koodev/+claude.el -*- lexical-binding: t; -*-
 
-;; claude-code.el integration. The package is declared in packages.el
-;; from a GitHub recipe; the :term vterm Doom module satisfies the
-;; terminal backend.
-(use-package! claude-code
+(use-package! claude-code-ide
   :defer t
-  :custom
-  (claude-code-terminal-backend 'vterm))
+  :config
+  ;; Eanble Emacs MCP
+  (claude-code-ide-emacs-tools-setup)
+  ;; Terminal backend
+  (setq claude-code-ide-terminal-backend 'vterm))
 
 ;;; +claude.el ends here
