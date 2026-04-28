@@ -6,7 +6,6 @@
 ;; Doom variables — top-level setting is endorsed by the default template
 ;; (see comment block in static/config.example.el upstream).
 (setq doom-theme 'doom-solarized-dark
-      doom-font  (font-spec :family "Monaco" :size 12)
       display-line-numbers-type t
       org-directory "~/org/")
 
