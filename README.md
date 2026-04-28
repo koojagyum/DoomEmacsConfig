@@ -14,6 +14,8 @@ Install Emacs
 $ brew tap railwaycat/emacsmacport
 $ brew install emacs-mac --with-modules
 $ brew install ripgrep
+$ brew install cmake
+$ brew install libvterm
 $ ln -s /opt/homebrew/opt/emacs-mac/Emacs.app /Applications/Emacs.app
 ```
 
