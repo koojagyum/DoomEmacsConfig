@@ -16,6 +16,7 @@
 (load! "koodev/+bindings")
 (load! "koodev/+org")
 (load! "koodev/+claude")
+(load! "koodev/+claude-named")
 
 ;; Per-machine overrides (e.g. sourcekit-lsp path, secrets). Optional —
 ;; the third argument tells `load!' to stay quiet if the file is missing.
