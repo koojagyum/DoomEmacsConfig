@@ -8,6 +8,6 @@
   ;; Terminal backend
   (setq claude-code-ide-terminal-backend 'vterm)
   ;; Window location and size
-  (setq claude-code-ide-window-side 'bottom))
+  (setq claude-code-ide-window-side 'right))
 
 ;;; +claude.el ends here

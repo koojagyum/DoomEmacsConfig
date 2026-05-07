@@ -55,6 +55,7 @@
 
 (package! org-bullets)
 (package! ox-pandoc)
+(package! org-modern)
 
 (package! claude-code-ide
   :recipe (:host github :repo "manzaltu/claude-code-ide.el"))

@@ -5,7 +5,7 @@
 
 ;; Doom variables — top-level setting is endorsed by the default template
 ;; (see comment block in static/config.example.el upstream).
-(setq doom-theme 'doom-solarized-dark
+(setq doom-theme 'doom-nord-aurora
       display-line-numbers-type t
       org-directory "~/org/")
 
