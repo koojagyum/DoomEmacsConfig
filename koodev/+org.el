@@ -13,7 +13,9 @@
 
 (use-package! org-modern
   :hook (org-mode . org-modern-mode)
-  :config (global-org-modern-mode))
+  :config
+  (setq org-modern-star 'replace)
+  (global-org-modern-mode))
 
 ;; Pandoc export — opt-in via `ox-pandoc' once the org exporter loads.
 (after! ox
