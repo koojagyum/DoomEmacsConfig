@@ -7,7 +7,7 @@
 ;; (see comment block in static/config.example.el upstream).
 (setq doom-theme 'doom-nord-aurora
       display-line-numbers-type t
-      org-directory "~/org/")
+      org-directory "~/Writing/org/")
 
 ;; User-local config files. `load!' is the canonical Doom way to pull in
 ;; sibling .el files relative to $DOOMDIR.
