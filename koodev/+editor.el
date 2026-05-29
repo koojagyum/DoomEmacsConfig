@@ -38,4 +38,16 @@ fallback for glyphs missing from Menlo (U+23FA, U+273D, etc.)."
 
   (add-hook 'vterm-mode-hook #'my/vterm-fix-claude-glyphs))
 
+;; Default frame size maximized
+(add-to-list 'default-frame-alist '(fullscreen . maximized))
+
+;; re-maximized automatically
+(defun koodev/refit-frames-on-monitor-change (_terminal)
+  (dolist (f (frame-list))
+    (when (frame-visible-p f)
+      (set-frame-parameter f 'fullscreen 'maximized))))
+
+(add-hook 'display-monitors-changed-functions
+          #'koodev/refit-frames-on-monitor-change)
+
 ;;; +editor.el ends here
